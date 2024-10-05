@@ -2,13 +2,6 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  // apiKey: "AIzaSyA2DxGlrrRikl0gZ6kcUCpN-NFsha9p1cE",
-  // authDomain: "clinic-booking-69a22.firebaseapp.com",
-  // projectId: "clinic-booking-69a22",
-  // storageBucket: "clinic-booking-69a22.appspot.com",
-  // messagingSenderId: "192938050695",
-  // appId: "1:192938050695:web:29a0a139d3824bc536e422",
-  // databaseURL: "https://clinic-booking-69a22-default-rtdb.firebaseio.com",
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
