@@ -1,0 +1,42 @@
+.nav {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navItem {
+    margin: 0 1rem;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  .navLink:hover {
+    color: #0056b3;
+    background-color: rgba(0, 123, 255, 0.1);
+  }
+  
+  .activeLink {
+    color: #ffffff;
+    background-color: #007bff;
+  }
+  
+  .activeLink:hover {
+    color: #ffffff;
+    background-color: #0056b3;
+  }
