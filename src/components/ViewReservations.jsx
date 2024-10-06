@@ -1,10 +1,16 @@
 import useFetchReservations from "../hooks/useFetchReservations";
-
+import {useState} from 'react';
 import ActionsModule from "./ActionsModule";
 import styles from "./ViewReservations.module.css";
 
 function ViewReservations() {
-  const reservations = useFetchReservations([]);
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
+  const reservations = useFetchReservations([], refreshTrigger);
+
+  const handleRefresh = () => {
+    setRefreshTrigger(prevValue => prevValue + 1);
+  }
+  console.log(reservations);
 
   return (
     <div>
@@ -35,7 +41,8 @@ function ViewReservations() {
               <td className={styles.tableData}>{reservation.time}</td>
               <td className={styles.tableData}>{reservation.createdAt}</td>
               <td className={styles.tableData}>
-                <ActionsModule />
+                <ActionsModule reservationID={reservation.id} handleRefresh={handleRefresh} />
+
               </td>
             </tr>
           ))}

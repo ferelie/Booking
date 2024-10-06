@@ -3,7 +3,7 @@ import { ref, get } from "firebase/database";
 import { database } from "../firebase/config";
 import { formatDate } from "../utils/utilFunctions";
 
-const useFetchReservations = (initialState) => {
+const useFetchReservations = (initialState, refreshTrigger) => {
   const [reservations, setReservations] = useState(initialState);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const useFetchReservations = (initialState) => {
       }
     };
     fetchReservations();
-  }, []);
+  }, [refreshTrigger]);
 
   return reservations;
 };
